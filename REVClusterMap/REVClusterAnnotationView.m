@@ -26,8 +26,8 @@
         label.backgroundColor = [UIColor clearColor];
         label.font = [UIFont boldSystemFontOfSize:11]; 
         label.textAlignment = UITextAlignmentCenter;
-        label.shadowColor = [UIColor blackColor];
-        label.shadowOffset = CGSizeMake(0,-1);
+        label.shadowColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.75f];
+        label.shadowOffset = CGSizeMake(-0.5f, -0.5f);
     }
     return self;
 }
@@ -35,12 +35,6 @@
 - (void) setClusterText:(NSString *)text
 {
     label.text = text;
-}
-
-- (void) dealloc
-{
-    [label release], label = nil;
-    [super dealloc];
 }
 
 @end
